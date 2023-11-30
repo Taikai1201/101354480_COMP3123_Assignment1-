@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "14": "^3.1.6",
     "cookie": "^0.5.0",
     "express": "^4.18.2",
     "mongodb": "^6.1.0",
-    "mongoose": "^7.6.1"
+    "mongoose": "^7.6.2",
+    "react-scripts": "^5.0.1"
   }
 }
