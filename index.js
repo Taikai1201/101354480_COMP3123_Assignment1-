@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-const SERVER_PORT = 8000
+const SERVER_PORT = process.env.PORT || 8000
 
 
 const DB_CONNECTION_STRING = "mongodb+srv://vudangdaiduong:Taikai1201@assignment1.ij06984.mongodb.net/comp3123_assignment?retryWrites=true&w=majority";
