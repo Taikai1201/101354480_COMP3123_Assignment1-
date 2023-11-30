@@ -5,6 +5,11 @@ const employeeRoute = require("./routes/EmployeeRoutes")
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
+const cors = require("cors")
+
+// to solve cross origin config 
+
+app.use(cors())
 
 const SERVER_PORT = process.env.PORT || 8000
 
@@ -27,3 +32,6 @@ app.use("/api/v1/emp", employeeRoute)
 app.listen(SERVER_PORT, () => {
     console.log(`Server running at http://localhost:${SERVER_PORT}`)
 })
+
+
+
