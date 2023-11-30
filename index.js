@@ -7,15 +7,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 const cors = require("cors")
 
-// to solve cross origin config 
+// cross origin config
 
-const corsConfig = {
-    origin: 'https://employee-manage.herokuapp.com',
-    optionSuccessStatus: 200
-}
-app.use(cors(corsConfig))
-app.options('*', cors());
-
+app.use(cors())
 
 const SERVER_PORT = process.env.PORT || 8000
 
