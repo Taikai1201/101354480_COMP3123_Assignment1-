@@ -9,7 +9,13 @@ const cors = require("cors")
 
 // to solve cross origin config 
 
-app.use(cors())
+const corsConfig = {
+    origin: 'https://employee-manage.herokuapp.com',
+    optionSuccessStatus: 200
+}
+app.use(cors(corsConfig))
+app.options('*', cors());
+
 
 const SERVER_PORT = process.env.PORT || 8000
 
