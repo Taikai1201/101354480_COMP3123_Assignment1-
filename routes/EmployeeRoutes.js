@@ -53,7 +53,7 @@ routes.get('/employees/:eid', async (req,res) => {
     
         res.status(200).json({ 
             "status": true,
-            "Employee detail:": employee
+            "Employee:": employee
         });
     }catch(error){
         res.status(500).json({
