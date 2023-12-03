@@ -52,7 +52,6 @@ routes.get('/employees/:eid', async (req,res) => {
         const employee = await empModel.findById(empID);   // DONE
     
         res.status(200).json({ 
-            "status": true,
             "Employee:": employee
         });
     }catch(error){
