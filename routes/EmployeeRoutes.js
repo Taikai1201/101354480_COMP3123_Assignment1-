@@ -52,7 +52,7 @@ routes.get('/employees/:eid', async (req,res) => {
         const employee = await empModel.findById(empID);   // DONE
     
         res.status(200).json({ 
-            "Employee:": employee
+            "Employee": employee
         });
     }catch(error){
         res.status(500).json({
